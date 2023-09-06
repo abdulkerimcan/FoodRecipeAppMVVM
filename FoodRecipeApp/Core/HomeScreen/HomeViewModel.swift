@@ -14,10 +14,12 @@ protocol HomeViewModelDelegate {
 
 final class HomeViewModel {
     weak var view: HomeScreenDelegate?
+    private let service = RecipeService()
 }
 
 extension HomeViewModel: HomeViewModelDelegate {
     func viewDidLoad() {
         view?.configureVC()
+        view?.configureCollectionView()
     }
 }
