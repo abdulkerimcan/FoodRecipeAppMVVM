@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6E6F3DD6-6B9B-40F1-ABCD-BF8E0A65F15F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C9FFF989-5E54-4D65-B294-B5548ADCAEF6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodRecipeApp/Service/RecipeService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "downloadRecipe(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1A655E9-97A4-443C-8DDE-70B50C18E7DC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodRecipeApp/Service/RecipeService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "RecipeService"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A2C22404-E55C-4273-B531-5FE65DFF7DED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodRecipeApp/Service/RecipeService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "downloadRecipe(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97FBFBC4-3295-46C3-A5A7-5052023087D2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodRecipeApp/Service/RecipeService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "handleWithData(data:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "97FBFBC4-3295-46C3-A5A7-5052023087D2 - ecf10ecf6bbcc6ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodRecipeApp.RecipeService.handleWithData(data: Foundation.Data) -&gt; Swift.Optional&lt;Swift.Array&lt;FoodRecipeApp.RecipeResult&gt;&gt;"
+                  moduleName = "FoodRecipeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kerim/Desktop/IOS%20Development/FoodRecipeApp/FoodRecipeApp/Service/RecipeService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "97FBFBC4-3295-46C3-A5A7-5052023087D2 - ecf10ecf6bbcc6c5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodRecipeApp.RecipeService.handleWithData(data: Foundation.Data) -&gt; Swift.Optional&lt;Swift.Array&lt;FoodRecipeApp.RecipeResult&gt;&gt;"
+                  moduleName = "FoodRecipeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kerim/Desktop/IOS%20Development/FoodRecipeApp/FoodRecipeApp/Service/RecipeService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C7A3DBA-1A3B-4AE1-A342-736B868B4CDD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodRecipeApp/Service/RecipeService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "downloadRecipe(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1C7A3DBA-1A3B-4AE1-A342-736B868B4CDD - b0748fc50bb89605"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodRecipeApp.RecipeService.downloadRecipe(completion: (Swift.Optional&lt;Swift.Array&lt;FoodRecipeApp.RecipeResult&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FoodRecipeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kerim/Desktop/IOS%20Development/FoodRecipeApp/FoodRecipeApp/Service/RecipeService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "1C7A3DBA-1A3B-4AE1-A342-736B868B4CDD - fa23725e1789c00e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in FoodRecipeApp.RecipeService.downloadRecipe(completion: (Swift.Optional&lt;Swift.Array&lt;FoodRecipeApp.RecipeResult&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FoodRecipeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kerim/Desktop/IOS%20Development/FoodRecipeApp/FoodRecipeApp/Service/RecipeService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C24AF4AA-90C3-4D08-AE98-7AE047B1A18F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodRecipeApp/Manager/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "download(url:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
