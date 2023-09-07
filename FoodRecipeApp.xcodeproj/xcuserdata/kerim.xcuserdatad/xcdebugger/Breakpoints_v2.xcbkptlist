@@ -55,54 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "97FBFBC4-3295-46C3-A5A7-5052023087D2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodRecipeApp/Service/RecipeService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "handleWithData(data:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "97FBFBC4-3295-46C3-A5A7-5052023087D2 - ecf10ecf6bbcc6ea"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FoodRecipeApp.RecipeService.handleWithData(data: Foundation.Data) -&gt; Swift.Optional&lt;Swift.Array&lt;FoodRecipeApp.RecipeResult&gt;&gt;"
-                  moduleName = "FoodRecipeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kerim/Desktop/IOS%20Development/FoodRecipeApp/FoodRecipeApp/Service/RecipeService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "168">
-               </Location>
-               <Location
-                  uuid = "97FBFBC4-3295-46C3-A5A7-5052023087D2 - ecf10ecf6bbcc6c5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FoodRecipeApp.RecipeService.handleWithData(data: Foundation.Data) -&gt; Swift.Optional&lt;Swift.Array&lt;FoodRecipeApp.RecipeResult&gt;&gt;"
-                  moduleName = "FoodRecipeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kerim/Desktop/IOS%20Development/FoodRecipeApp/FoodRecipeApp/Service/RecipeService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "168">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1C7A3DBA-1A3B-4AE1-A342-736B868B4CDD"
             shouldBeEnabled = "No"
             ignoreCount = "0"

@@ -9,10 +9,10 @@ import Foundation
 
 final class RecipeService {
     
-    func downloadRecipe(completion: @escaping ([RecipeResult]?) -> ()) {
+    func downloadRecipe(completion: @escaping ([CategoryElement]?) -> ()) {
        
-        
-        ApiManager.shared.download(url: "https://tasty.p.rapidapi.com/feeds/list?size=5&timezone=%2B0700&vegetarian=false&from=0") { result in
+        guard let url = URL(string:"https://www.themealdb.com/api/json/v1/1/categories.php") else {return}
+        ApiManager.shared.download(url: url) { result in
             switch result {
             case .failure(let error):
                 self.handleWithError(error: error)
@@ -22,15 +22,14 @@ final class RecipeService {
         }
     }
     
-    func handleWithError(error: Error) {
-        print(error.localizedDescription)
+    private func handleWithError(error: Error) {
+        print(String(describing: error.localizedDescription))
     }
     
-    func handleWithData(data: Data) -> [RecipeResult]?{
+    private func handleWithData(data: Data) -> [CategoryElement]?{
         do {
-            let recipe = try JSONDecoder().decode(Recipe.self, from: data)
-            
-            return recipe.results
+            let category = try JSONDecoder().decode(Category.self, from: data)
+            return category.categories
         }catch{
             handleWithError(error: error)
         }

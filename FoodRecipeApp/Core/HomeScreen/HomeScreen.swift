@@ -10,6 +10,7 @@ import UIKit
 protocol HomeScreenDelegate: AnyObject {
     func configureVC()
     func configureCollectionView()
+    func reloadCollectionView()
 }
 
 final class HomeScreen: UIViewController {
@@ -44,20 +45,24 @@ extension HomeScreen: HomeScreenDelegate {
                     collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
                     collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
                 ])
-        
     }
+    
+    func reloadCollectionView() {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
 }
 
 extension HomeScreen: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return viewModel.categoryList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeCollectionViewCell.identifer, for: indexPath) as! RecipeCollectionViewCell
-        
+        cell.setCell(categoryResult: viewModel.categoryList[indexPath.item])
         return cell
     }
-    
     
 }

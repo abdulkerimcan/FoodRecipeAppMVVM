@@ -10,10 +10,12 @@ import UIKit
 class RecipeCollectionViewCell: UICollectionViewCell {
     static let identifer = "RecipeCollectionViewCell"
     private var categoryLabel: UILabel!
+    private var posterImage: PosterImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureCell()
+        configurePosterImageView()
         configureCategoryLabel()
     }
     
@@ -21,11 +23,13 @@ class RecipeCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     override func prepareForReuse() {
-        
+        posterImage.image = nil
+        posterImage.cancelDownloading()
     }
     
-    func setCell(recipeResult: RecipeResult) {
-        
+    func setCell(categoryResult: CategoryElement) {
+        posterImage.downloadImage(item: categoryResult)
+        categoryLabel.text = categoryResult.strCategory
     }
     
     func configureCell() {
@@ -42,6 +46,17 @@ class RecipeCollectionViewCell: UICollectionViewCell {
             categoryLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             categoryLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
+    }
+    func configurePosterImageView() {
+        posterImage = PosterImageView(frame: .zero)
+        addSubview(posterImage)
+        posterImage.translatesAutoresizingMaskIntoConstraints = false
         
+        NSLayoutConstraint.activate([
+            posterImage.topAnchor.constraint(equalTo: self.topAnchor),
+            posterImage.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            posterImage.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            posterImage.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
     }
 }
