@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A31DEB62AA9F45B001F3585 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A31DEB52AA9F45B001F3585 /* CategoryModel.swift */; };
+		0A31DEB62AA9F45B001F3585 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A31DEB52AA9F45B001F3585 /* CategoriesModel.swift */; };
 		0AA093012AA7CF2E003AACD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA093002AA7CF2E003AACD1 /* AppDelegate.swift */; };
 		0AA093032AA7CF2E003AACD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA093022AA7CF2E003AACD1 /* SceneDelegate.swift */; };
 		0AA0930A2AA7CF2F003AACD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA093092AA7CF2F003AACD1 /* Assets.xcassets */; };
@@ -21,10 +21,13 @@
 		0ADD9AA62AA89BEF00148D17 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD9AA52AA89BEF00148D17 /* CGFloat+Ext.swift */; };
 		0ADD9AAA2AA89FE100148D17 /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD9AA92AA89FE100148D17 /* RecipeCollectionViewCell.swift */; };
 		0ADD9AAC2AA8B46700148D17 /* PosterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD9AAB2AA8B46700148D17 /* PosterImageView.swift */; };
+		0AF031272AAA79F500710853 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF031262AAA79F500710853 /* CategoryModel.swift */; };
+		0AF0312A2AAA7B9300710853 /* CategoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF031292AAA7B9300710853 /* CategoryScreen.swift */; };
+		0AF0312C2AAA7C0C00710853 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF0312B2AAA7C0C00710853 /* CategoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A31DEB52AA9F45B001F3585 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		0A31DEB52AA9F45B001F3585 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 		0AA092FD2AA7CF2E003AACD1 /* FoodRecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodRecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA093002AA7CF2E003AACD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AA093022AA7CF2E003AACD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +43,9 @@
 		0ADD9AA52AA89BEF00148D17 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
 		0ADD9AA92AA89FE100148D17 /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		0ADD9AAB2AA8B46700148D17 /* PosterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImageView.swift; sourceTree = "<group>"; };
+		0AF031262AAA79F500710853 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		0AF031292AAA7B9300710853 /* CategoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryScreen.swift; sourceTree = "<group>"; };
+		0AF0312B2AAA7C0C00710853 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 			children = (
 				0AA0931E2AA7D6BC003AACD1 /* Components */,
 				0AA093182AA7D363003AACD1 /* HomeScreen */,
+				0AF031282AAA7B3C00710853 /* CategoryScreen */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -133,7 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				0AA0931F2AA7D8FA003AACD1 /* RecipeModel.swift */,
-				0A31DEB52AA9F45B001F3585 /* CategoryModel.swift */,
+				0A31DEB52AA9F45B001F3585 /* CategoriesModel.swift */,
+				0AF031262AAA79F500710853 /* CategoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,6 +169,15 @@
 				0ADD9AA52AA89BEF00148D17 /* CGFloat+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0AF031282AAA7B3C00710853 /* CategoryScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0AF031292AAA7B9300710853 /* CategoryScreen.swift */,
+				0AF0312B2AAA7C0C00710853 /* CategoryViewModel.swift */,
+			);
+			path = CategoryScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,16 +250,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF031272AAA79F500710853 /* CategoryModel.swift in Sources */,
 				0AA0931C2AA7D39F003AACD1 /* ApiManager.swift in Sources */,
-				0A31DEB62AA9F45B001F3585 /* CategoryModel.swift in Sources */,
+				0A31DEB62AA9F45B001F3585 /* CategoriesModel.swift in Sources */,
 				0ADD9AAC2AA8B46700148D17 /* PosterImageView.swift in Sources */,
 				0AA093222AA7E3EB003AACD1 /* RecipeService.swift in Sources */,
 				0ADD9AAA2AA89FE100148D17 /* RecipeCollectionViewCell.swift in Sources */,
 				0ADD9A9E2AA87DC000148D17 /* HomeViewModel.swift in Sources */,
+				0AF0312C2AAA7C0C00710853 /* CategoryViewModel.swift in Sources */,
 				0AA093012AA7CF2E003AACD1 /* AppDelegate.swift in Sources */,
 				0AA093202AA7D8FA003AACD1 /* RecipeModel.swift in Sources */,
 				0AA093032AA7CF2E003AACD1 /* SceneDelegate.swift in Sources */,
 				0ADD9AA62AA89BEF00148D17 /* CGFloat+Ext.swift in Sources */,
+				0AF0312A2AAA7B9300710853 /* CategoryScreen.swift in Sources */,
 				0AA0931A2AA7D379003AACD1 /* HomeScreen.swift in Sources */,
 				0ADD9AA32AA89BAE00148D17 /* UIHelper.swift in Sources */,
 			);

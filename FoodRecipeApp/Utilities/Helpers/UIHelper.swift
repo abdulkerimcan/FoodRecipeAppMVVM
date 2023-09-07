@@ -18,5 +18,4 @@ enum UIHelper {
         layout.itemSize = size
         return layout
     }
-
 }

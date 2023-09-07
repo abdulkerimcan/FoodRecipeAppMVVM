@@ -33,7 +33,7 @@ class RecipeCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCell() {
-        self.backgroundColor = .systemGray3
+        layer.borderWidth = 0.3
         layer.cornerRadius = 10
         clipsToBounds = true
     }
@@ -41,10 +41,11 @@ class RecipeCollectionViewCell: UICollectionViewCell {
         categoryLabel = UILabel(frame: .zero)
         addSubview(categoryLabel)
         categoryLabel.translatesAutoresizingMaskIntoConstraints = false
+        categoryLabel.numberOfLines = 0
         categoryLabel.font = .boldSystemFont(ofSize: 25)
         NSLayoutConstraint.activate([
             categoryLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            categoryLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            categoryLabel.bottomAnchor.constraint(lessThanOrEqualTo: posterImage.bottomAnchor,constant: 40)
         ])
     }
     func configurePosterImageView() {
@@ -53,10 +54,9 @@ class RecipeCollectionViewCell: UICollectionViewCell {
         posterImage.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            posterImage.topAnchor.constraint(equalTo: self.topAnchor),
-            posterImage.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            posterImage.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            posterImage.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            posterImage.widthAnchor.constraint(equalToConstant: CGFloat.dWidth * 0.3),
+            posterImage.heightAnchor.constraint(equalToConstant: CGFloat.dWidth * 0.3),
+            posterImage.centerXAnchor.constraint(equalTo: self.centerXAnchor),
         ])
     }
 }

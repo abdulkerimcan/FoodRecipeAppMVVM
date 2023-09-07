@@ -2,26 +2,18 @@
 //  CategoryModel.swift
 //  FoodRecipeApp
 //
-//  Created by Abdulkerim Can on 7.09.2023.
+//  Created by Abdulkerim Can on 8.09.2023.
 //
 
 import Foundation
 
-
 struct Category: Codable {
-    let categories: [CategoryElement]?
+    let meals: [Meal]?
 }
 
-// MARK: - CategoryElement
-struct CategoryElement: Codable {
-    let idCategory, strCategory: String?
-    let strCategoryThumb: String?
-    let strCategoryDescription: String?
-    
-    var _strCategory: String {
-        strCategory ?? "N/A"
-    }
-    var _strCategoryThumb: String {
-        strCategoryThumb ?? "N/A"
-    }
+// MARK: - Meal
+struct Meal: Codable {
+    let strMeal: String?
+    let strMealThumb: String?
+    let idMeal: String?
 }
