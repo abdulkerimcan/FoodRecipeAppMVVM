@@ -11,7 +11,7 @@ protocol HomeViewModelDelegate {
     var view: HomeScreenDelegate? {get set}
     func viewDidLoad()
     func getCategories()
-    func getCategory(strCategory: String)
+    func getCategory(strCategory: String,categoryElement: CategoryElement)
 }
 
 final class HomeViewModel {
@@ -21,12 +21,11 @@ final class HomeViewModel {
 }
 
 extension HomeViewModel: HomeViewModelDelegate {
-    func getCategory(strCategory: String) {
-        service.downloadCategory(strCategory: strCategory) { [weak self] category in
-            guard let self = self else {return}
-            guard let category = category else {return}
-            self.view?.navigateToCategory(category: category)
-        }
+    
+    func getCategory(strCategory: String, categoryElement: CategoryElement) {
+        
+            self.view?.navigateToCategory(categoryElement: categoryElement)
+        
     }
     
     func getCategories() {

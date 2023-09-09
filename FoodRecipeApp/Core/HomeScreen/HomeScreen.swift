@@ -12,7 +12,7 @@ protocol HomeScreenDelegate: AnyObject {
     func configureCollectionView()
     func configureHeaderLabel()
     func reloadCollectionView()
-    func navigateToCategory(category: Category)
+    func navigateToCategory(categoryElement: CategoryElement)
 }
 
 final class HomeScreen: UIViewController {
@@ -33,7 +33,6 @@ extension HomeScreen: HomeScreenDelegate {
     func configureVC() {
         view.backgroundColor = .systemBackground
         title = "Categories"
-        
     }
     
     func configureHeaderLabel() {
@@ -53,12 +52,12 @@ extension HomeScreen: HomeScreenDelegate {
     }
     
     func configureCollectionView() {
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: UIHelper.createLayout())
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: UIHelper.createGridLayout())
         view.addSubview(collectionView)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(RecipeCollectionViewCell.self, forCellWithReuseIdentifier: RecipeCollectionViewCell.identifer)
+        collectionView.register(CategoriesCollectionViewCell.self, forCellWithReuseIdentifier: CategoriesCollectionViewCell.identifer)
         
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: headerLabel.bottomAnchor,constant: CGFloat.padding),
@@ -75,9 +74,10 @@ extension HomeScreen: HomeScreenDelegate {
                 self.collectionView.reloadData()
             }
         }
-    func navigateToCategory(category: Category) {
+    
+    func navigateToCategory(categoryElement: CategoryElement) {
         DispatchQueue.main.async {
-            let categoryScreen = CategoryScreen(category: category)
+            let categoryScreen = CategoryScreen(categoryName: categoryElement._strCategory, categoryDescription: categoryElement._strCategoryDescription)
             self.navigationController?.pushViewController(categoryScreen, animated: true)
         }
     }
@@ -89,13 +89,13 @@ extension HomeScreen: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeCollectionViewCell.identifer, for: indexPath) as! RecipeCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCollectionViewCell.identifer, for: indexPath) as! CategoriesCollectionViewCell
         cell.setCell(categoryResult: viewModel.categoryList[indexPath.item])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.getCategory(strCategory: viewModel.categoryList[indexPath.item]._strCategory)
+        viewModel.getCategory(strCategory: viewModel.categoryList[indexPath.item]._strCategory,categoryElement: viewModel.categoryList[indexPath.item])
     }
     
 }

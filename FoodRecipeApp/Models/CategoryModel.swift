@@ -16,4 +16,12 @@ struct Meal: Codable {
     let strMeal: String?
     let strMealThumb: String?
     let idMeal: String?
+    
+    var _strMeal: String {
+        strMeal ?? "N/A"
+    }
+    
+    var _strMealThumb: String {
+        strMealThumb ?? "N/A"
+    }
 }

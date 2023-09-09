@@ -24,4 +24,7 @@ struct CategoryElement: Codable {
     var _strCategoryThumb: String {
         strCategoryThumb ?? "N/A"
     }
+    var _strCategoryDescription: String {
+        strCategoryDescription ?? "N/A"
+    }
 }

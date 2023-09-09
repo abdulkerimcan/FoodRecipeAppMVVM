@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RecipeCollectionViewCell: UICollectionViewCell {
+final class CategoriesCollectionViewCell: UICollectionViewCell {
     static let identifer = "RecipeCollectionViewCell"
     private var categoryLabel: UILabel!
     private var posterImage: PosterImageView!
@@ -23,12 +23,13 @@ class RecipeCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     override func prepareForReuse() {
+        super.prepareForReuse()
         posterImage.image = nil
         posterImage.cancelDownloading()
     }
     
     func setCell(categoryResult: CategoryElement) {
-        posterImage.downloadImage(item: categoryResult)
+        posterImage.downloadImage(urlString: categoryResult._strCategoryThumb)
         categoryLabel.text = categoryResult.strCategory
     }
     

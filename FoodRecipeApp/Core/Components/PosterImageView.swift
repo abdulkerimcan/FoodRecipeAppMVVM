@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PosterImageView: UIImageView {
+final class PosterImageView: UIImageView {
     private var dataTask: URLSessionTask?
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -17,10 +17,9 @@ class PosterImageView: UIImageView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func downloadImage(item: CategoryElement?) {
-        guard let item = item else {return}
-
-        guard let url = URL(string: item._strCategoryThumb) else {
+    func downloadImage(urlString: String?) {
+        guard let urlString = urlString else {return}
+        guard let url = URL(string: urlString) else {
             return
         }
        dataTask = ApiManager.shared.download(url: url) {[weak self] result in
